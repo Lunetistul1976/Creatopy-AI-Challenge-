@@ -1,0 +1,47 @@
+.Story-flex{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap:3.292vw;
+}
+
+.Story-info{
+  margin-top: 3.292vw;
+}
+
+
+
+.Text-Input-Image:hover{
+transform: scale(1.2);
+cursor: pointer;
+}
+
+
+.Input{
+  position: relative;
+}
+
+.Hover-text{
+  opacity: 0;
+  color: #edefee;
+  font-weight: medium;
+  position: absolute;
+  background-color:#141414;
+  top: 0.494vw;
+  transition: opacity 0.3s ease;
+  padding: 0.329vw 1.317vw;
+  padding-bottom: 0.527vw;
+  border-radius: 0.658vw;
+}
+
+.Text-Input-Image:hover +.Hover-text{
+  opacity: 1;
+}
+
+
+@media screen and (max-width: 767px) {
+  .Input{
+    margin-bottom: 40px;
+  }
+}

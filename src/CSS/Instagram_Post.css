@@ -1,0 +1,45 @@
+ .Instagram-Post-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:3.292vw;
+  margin-top: 1.975vw;
+  }
+
+  .Input{
+    position: relative;
+  }
+  
+  .Text-Input-Image:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+  }
+  
+  .Hover-text{
+    opacity: 0;
+    color: #edefee;
+    font-weight: medium;
+    position: absolute;
+    background-color:#141414;
+    top: 0.494vw;
+    transition: opacity 0.3s ease;
+    padding: 0.329vw 1.317vw;
+    padding-bottom: 0.527vw;
+    border-radius: 0.658vw;
+  }
+  
+  
+
+  @media screen and (max-width: 767px) {
+    .Instagram-Post-flex {
+      min-height: 50vh; /* Adjust the value based on your design */
+      margin-top: 0; /* Centering the background vertically */
+    }
+  }
+
+  @media  (min-width: 768px) {
+    .Text-Input-Image:hover + .Hover-text {
+      opacity: 1;
+    }
+  }

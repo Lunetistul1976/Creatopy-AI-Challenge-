@@ -1,0 +1,43 @@
+.Twitter-Header-flex-component{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: 3.329vw;
+}
+
+
+
+.Text-Input-Image:hover{
+transform: scale(1.2);
+cursor: pointer;
+}
+
+.Input{
+  position: relative;
+}
+
+
+.Hover-text{
+  opacity: 0;
+  color: #edefee;
+  font-weight: medium;
+  position: absolute;
+  background-color:#141414;
+  top: 0.494vw;
+  transition: opacity 0.3s ease;
+  padding: 0.329vw 1.317vw;
+  padding-bottom: 0.527vw;
+  border-radius: 0.658vw;
+}
+
+.Text-Input-Image:hover +.Hover-text{
+  opacity: 1;
+}
+
+@media screen and (max-width: 767px) {
+  .Twitter-Header-flex-component {
+    min-height: 50vh; /* Adjust the value based on your design */
+    margin-top: 0; /* Centering the background vertically */
+  }
+}

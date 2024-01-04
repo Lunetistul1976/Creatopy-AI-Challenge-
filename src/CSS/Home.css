@@ -1,0 +1,22 @@
+.Home-BG{
+  background-color:  #dbd0e9;
+  margin: 0; /* Reset margin to 0 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 19.75vw;
+  margin-top: 3.292vw;
+}
+
+
+.Twitter-Header-Info{
+  margin-left: 0.658vw;
+}
+
+@media screen and (max-width: 767px) {
+  .Home-BG {
+    min-height: 50vh; /* Adjust the value based on your design */
+    margin-top: 0; /* Centering the background vertically */
+  }
+}
