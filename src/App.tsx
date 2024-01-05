@@ -43,7 +43,7 @@ export const App: FC = () => {
 
   const ChatGptAPI = 'https://api.openai.com/v1/chat/completions';
 
-  const keyAPI = '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'
+
 
   
 
@@ -56,7 +56,7 @@ export const App: FC = () => {
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
       messages: [
-      { role: 'user', content: `Generate an ad about ${userText}. Provide the title, description, image description, and button text. The title should contain at most 4 words.The button text should contain two words at most. The description should have at most 3 lines without separation of ideas. The description should not contain any numbers or this character -.The image description should be as specific as posibile and should be relative for the add.`  },
+      { role: 'user', content: `Generate an ad about ${userText}. Provide the title, description, image description, and button text. The title should contain at most 4 words.The button text should contain two short words at most.The button text words  should have at most 4 characters each. The description should have at most 3 lines without separation of ideas. The description should not contain any numbers or this character -.The image description should be as specific as posibile and should be relative for the add.`  },
       ],
       max_tokens: 500,
     }),

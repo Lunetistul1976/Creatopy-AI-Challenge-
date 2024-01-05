@@ -123,7 +123,7 @@ font-weight:bold;
 font-size:1.053vw;
 @media (max-width: 768px) {
   /* Adjust the values for small screens */
-  bottom: 3.5vw;
+  bottom: 3vw;
   padding-right:30px;
   padding-bottom:6px;
 }`;

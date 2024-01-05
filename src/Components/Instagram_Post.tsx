@@ -34,12 +34,11 @@ margin-left:1.053vw;
 `;
 
 const StyledButton=styled.button`
-width: 7.924vw;
-height: 2.438vw;
+width: 10.007vw;
+height: 2.436vw;
 color: #edefee;
 background-color:#daa520 ;
 position:relative;
-bottom:0.987vw;
 border-radius:1.317vw;
 font-weight:bold;
 cursor:pointer;
@@ -60,9 +59,8 @@ color:#edefee;
 const StyledImage=styled.img`
 width:23.56vw;
 height:15.685vw;
-margin-bottom:2vw;
 position:relative;
-bottom:1vw;
+bottom:1.5vw;
 `;
 
 const StyledBannerPost=styled.div`
@@ -166,7 +164,7 @@ console.log('The image URL is: ', imageContent)
               src={imageContent}
               alt='post'
             />
-            <StyledButton>{buttonTextContent}</StyledButton>
+            {chatResponse?<StyledButton style={{'marginBottom':'1vw'}}>{buttonTextContent}</StyledButton>:<StyledButton>{buttonTextContent}</StyledButton>}
           </StyledBannerPost>
         </div>
         <div className='Input'>         
