@@ -94,7 +94,7 @@ bottom:0.658vw;
 border-radius:0.658vw;
 `;
 
-const StyledButton=styled.button`
+const StyledButton=styled.button<{isbutton?:boolean}>`
 width:6.583vw;
 height:3.292vw;
 color: #edefee;
@@ -104,6 +104,10 @@ bottom:0.987vw;
 border-radius:1.317vw;
 font-weight:bold;
 font-size:1.053vw;
+@media (max-width:768px){
+  padding-right: ${({isbutton})=>(isbutton?'25px':'0px')};
+  text-wrap:${({isbutton})=>(isbutton?'nowrap':'wrap')};
+}
 `;
 
 
@@ -119,7 +123,7 @@ font-weight:bold;
 font-size:1.053vw;
 @media (max-width: 768px) {
   /* Adjust the values for small screens */
-  bottom: 2.8vw;
+  bottom: 3.5vw;
   padding-right:30px;
   padding-bottom:6px;
 }`;
@@ -158,7 +162,7 @@ interface HomeProps {
   <StyledTitle>Title of the add</StyledTitle>
   <StyledDescription>This is the description of the add</StyledDescription>
   <StyledImage src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
-  <StyledButton>Register</StyledButton>
+  <StyledButton isbutton>Register</StyledButton>
   </StyledBannerPost>
   <StyledBannerInfo style={{'position':'relative','bottom':'1.58vw'}}>
   <p style={{'position':'relative','top':'0.329vw'}}>Instagram Poster</p>
@@ -193,7 +197,7 @@ interface HomeProps {
   <StyledTitle>Title of the add</StyledTitle>
   <StyledDescription style={{'marginLeft':'0.527vw'}}>This is the description of the add</StyledDescription>
   <StyledImageStory src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
-  <StyledButton >Sign up</StyledButton>
+  <StyledButton isbutton>Sign up</StyledButton>
   </StyledBannerStory>
   <StyledBannerInfo style={{'position':'relative','bottom':'3.292vw'}}>
   <p style={{'position':'relative','top':'0.329vw'}}>Story</p>

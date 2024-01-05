@@ -44,6 +44,10 @@ border-radius:1.317vw;
 font-weight:bold;
 cursor:pointer;
 font-size:1.053vw;
+@media (max-width:756px){
+ padding-right:26px;
+ text-wrap:nowrap;
+}
 `;
 
 const StyledTitle=styled.h1`
