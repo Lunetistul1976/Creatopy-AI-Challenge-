@@ -14,9 +14,8 @@
   margin-left: 0.658vw;
 }
 
-@media screen and (max-width: 767px) {
+@media  (max-width: 767px) {
   .Home-BG {
-    min-height: 50vh; /* Adjust the value based on your design */
-    margin-top: 0; /* Centering the background vertically */
+    margin-top: 18vh;
   }
 }

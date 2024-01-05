@@ -37,7 +37,6 @@ cursor: pointer;
 
 @media screen and (max-width: 767px) {
   .Twitter-Header-flex-component {
-    min-height: 50vh; /* Adjust the value based on your design */
-    margin-top: 0; /* Centering the background vertically */
+    margin-top: 18vh;
   }
 }

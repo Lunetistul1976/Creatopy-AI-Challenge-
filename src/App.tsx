@@ -43,7 +43,7 @@ export const App: FC = () => {
 
   const ChatGptAPI = 'https://api.openai.com/v1/chat/completions';
 
-  const keyAPI = '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'
+  const keyAPI = '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'
 
   
 
