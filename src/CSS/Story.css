@@ -44,4 +44,7 @@ cursor: pointer;
   .Input{
     margin-bottom: 40px;
   }
+  .Hover-text{
+    display: none;
+  }
 }

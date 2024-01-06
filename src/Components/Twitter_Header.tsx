@@ -121,29 +121,29 @@ export const Twitter_Header: React.FC<TwitterProps> = ({fetchChatInformation,cha
 
   const titleContent = chatResponse && chatResponse.choices 
   ? chatResponse.choices[0].message.content
-      .match(/Title:(.*?)(?=Description:)/s)?.[1]
+      .match(/Title:(.*?)(?=Description:)/is)?.[1]
       .replace(/"/g, '').trim()
   : 'Title of the ad';
-
 
   const descriptionContent =
   chatResponse && chatResponse.choices
     ? chatResponse.choices[0].message.content
-    .match(
-      /Description:[\n\s]*([\s\S]*?)\n\s*Image Description:/s)?.[1]
-      .replace(/"/g, '') // Remove empty string
-      .trim()
+        .match(/Description:[\s]*(.*?)(?=Image Description:)/is)?.[1]
+        .replace(/"/g, '')
+        .trim()
     : 'This is the description of the ad.';
+
+const buttonTextContent = chatResponse && chatResponse.choices 
+  ? chatResponse.choices[0].message.content
+      .match(/Button\s*Text:\s*"?([^"]*)"?/is)?.[1]
+      .replace(/"/g, '').trim()
+  : 'Download';
 
 const imageContent= imageLink?imageLink.data[0].url:'https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 
 console.log('The image URL is: ', imageContent)
 
-  const buttonTextContent = chatResponse && chatResponse.choices 
-  ? chatResponse.choices[0].message.content
-  .match(/Button Text: "(.*?)"/)?.[1]
-  .replace(/"/g, '').trim()
-  :'Download'
+ 
   return(
 
     <div>

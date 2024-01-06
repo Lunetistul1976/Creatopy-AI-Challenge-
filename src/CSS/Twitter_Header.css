@@ -39,4 +39,7 @@ cursor: pointer;
   .Twitter-Header-flex-component {
     margin-top: 18vh;
   }
+  .Hover-text{
+    display: none;
+  }
 }

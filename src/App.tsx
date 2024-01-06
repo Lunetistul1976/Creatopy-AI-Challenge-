@@ -41,9 +41,11 @@ export const App: FC = () => {
     useInstagramPost(false);
   };
 
+
+
   const ChatGptAPI = 'https://api.openai.com/v1/chat/completions';
 
-
+  
 
   
 
@@ -56,7 +58,8 @@ export const App: FC = () => {
     body: JSON.stringify({
       model: 'gpt-3.5-turbo',
       messages: [
-      { role: 'user', content: `Generate an ad about ${userText}. Provide the title, description, image description, and button text. The title should contain at most 4 words.The button text should contain two short words at most.The button text words  should have at most 4 characters each. The description should have at most 3 lines without separation of ideas. The description should not contain any numbers or this character -.The image description should be as specific as posibile and should be relative for the add.`  },
+      { role: 'user', content: `Generate an ad about ${userText}. Provide the title, description, image description, and button text. The title should contain at most 3 words. The button text should contain two short words at most, with each word having at most 4 characters. The description should have at most 3 short lines without the separation of ideas. The description should not contain the character "-", and ensure that generated ideas do not start with numbers. The image description should be as specific as possible and relative to the ad.The image description should be generated before the button text
+      ` },
       ],
       max_tokens: 500,
     }),
@@ -112,7 +115,7 @@ export const App: FC = () => {
 
     if (chatResponse && chatResponse.choices) {
       const newImageContent = chatResponse.choices[0].message.content
-        .match(/Image Description:([\s\S]*?)Button Text:/)?.[1]
+        .match(/Image Description:([\s\S]*?)Button Text:/is)?.[1]
         .trim();
 
       // Call fetchAPIImage with the new image content
@@ -137,7 +140,7 @@ export const App: FC = () => {
          imageLink={imageLink} defaultImage={defaultImage} />
       ) : story ? (
         <Story fetchChatInformation={fetchChatInformation} chatResponse={chatResponse} setUserText={setUserText} userText={userText} 
-         imageLink={imageLink} defaultImage={defaultImage}/>
+         imageLink={imageLink} defaultImage={defaultImage} />
       ) : null}
     </div>
   );
