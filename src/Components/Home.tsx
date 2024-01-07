@@ -159,8 +159,8 @@ interface HomeProps {
 <StyledBanner onClick={showInstagramPost}>
   
   <StyledBannerPost>
-  <StyledTitle>Title of the add</StyledTitle>
-  <StyledDescription>This is the description of the add</StyledDescription>
+  <StyledTitle>Title of the ad</StyledTitle>
+  <StyledDescription>This is the description of the ad</StyledDescription>
   <StyledImage src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
   <StyledButton isbutton>Register</StyledButton>
   </StyledBannerPost>
@@ -176,8 +176,8 @@ interface HomeProps {
 <StyledBanner onClick={showTwitterHeader}>
   <StyledBannerHeader>
   <div className='Twitter-Header-Info'>
-  <StyledTitle isbannerheader>Title of the add</StyledTitle>
-  <StyledDescription style={{'bottom':'0.461vw'}}>This is the description of the add</StyledDescription>
+  <StyledTitle isbannerheader>Title of the ad</StyledTitle>
+  <StyledDescription style={{'bottom':'0.461vw','right':'0.5vw'}}>This is the description of the ad</StyledDescription>
   <StyledButtonHeader>Download</StyledButtonHeader>
   </div>
   <StyledImageHeader src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
@@ -194,8 +194,8 @@ interface HomeProps {
 
 <StyledBanner onClick={showStory}>
   <StyledBannerStory>
-  <StyledTitle>Title of the add</StyledTitle>
-  <StyledDescription style={{'marginLeft':'0.527vw'}}>This is the description of the add</StyledDescription>
+  <StyledTitle>Title of the ad</StyledTitle>
+  <StyledDescription style={{'marginLeft':'0.527vw'}}>This is the description of the ad </StyledDescription>
   <StyledImageStory src='https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2020&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'/>
   <StyledButton isbutton>Sign up</StyledButton>
   </StyledBannerStory>

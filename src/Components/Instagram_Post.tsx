@@ -178,7 +178,7 @@ console.log('The image URL is: ', imageContent)
         <StyledTextInput 
         value={userText}
         onChange={handleTextChange}
-        placeholder='Your add description' />
+        placeholder='Your ad description' />
         {defaultImage?<img className='Text-Input-Image' src={defaultImage} alt='send' onClick={handleButtonClick} style={{ 'width': '1.975vw',
     'height': '1.975vw','position': 'relative','bottom': '0.658vw','right': '3.423vw','transition': '0.3s ease-in'}} />:null}
         <span className='Hover-text'>Generate</span>

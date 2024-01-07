@@ -162,7 +162,7 @@ console.log('The image URL is: ', imageContent)
   <div className='Input'>
     <StyledTextInput value={userText}
         onChange={handleTextChange}
-        placeholder='Your add description' />
+        placeholder='Your ad description' />
 
     {defaultImage?<img className='Text-Input-Image' src={defaultImage} alt='send' onClick={handleButtonClick}
     style={{ 'width': '1.975vw',
